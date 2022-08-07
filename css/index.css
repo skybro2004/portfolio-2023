@@ -1,0 +1,271 @@
+/* ===============fonts=============== */
+/* @import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Nanum+Gothic&display=swap');
+*{
+    font-family: 'Inter', 'Nanum Gothic', sans-serif;
+}
+
+
+
+/* ===============init=============== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Inter; */
+}
+
+html, body, header, main{
+    height: 100%;
+}
+
+
+
+*::-webkit-scrollbar{
+    /* background-color: transparent; */
+    width: 10px;
+}
+*::-webkit-scrollbar:hover{
+    width: 15px;
+}
+*::-webkit-scrollbar-button{
+    display: none;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: black;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.card.left{
+    align-items: flex-start;
+}
+.card.right{
+    align-items: flex-end;
+}
+.card-header{
+    display: block;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 0.5rem;
+}
+.card-header.large{
+    font-size: 2rem;
+    padding: 0.8rem 1rem;
+}
+.card-content{
+    width: 100%;
+    background-color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px darkgray;
+    padding: 1rem;
+}
+
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* ===============main=============== */
+html{
+    background-color: #F5F5F5;
+}
+header{
+    position: relative;
+}
+header .typo-container{
+    position: absolute;
+    left: 2rem;
+    top: 5rem;
+    width: 45vw;
+}
+header .typo{
+    position: relative;
+    font-size: calc(50vw / 8);
+}
+header .typo::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+@keyframes slide-to-left{
+    0%{
+        margin-left: 100%;
+        width: 0;
+    }
+    50%{
+        margin-left: 0;
+        width: 100%;
+    }
+    100%{
+        margin-left: 0;
+        width: 0;
+    }
+}
+header .typo:first-child::before{
+    animation-name: slide-to-left;
+    animation-duration: 2s;
+}
+@keyframes slide-to-right{
+    0%{
+        margin-left: 0;
+        width: 0;
+    }
+    50%{
+        margin-left: 0;
+        width: 100%;
+    }
+    100%{
+        margin-left: 100%;
+        width: 0;
+    }
+}
+header .typo:last-child::before{
+    animation-name: slide-to-right;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+}
+
+
+header .card{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: calc(100% - 4rem);
+    margin: 2rem;
+    width: 40vw;
+}
+header .card .card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+header .card .title{
+    text-align: end;
+    font-size: calc(60vw / 9);
+}
+
+
+
+main{
+    padding: 2rem;
+}
+
+
+
+#info{
+    padding-left: 0;
+}
+#info>.flex-row{
+    height: 100%;
+}
+#info .card{
+    margin-left: 2rem;
+}
+#personal-info.card{
+    height: 100%;
+}
+#personal-info img{
+    max-height: 50vh;
+    border: solid white;
+    border-width: 6px 6px 30px 6px;
+    box-shadow: 0 2px 4px darkgray;
+}
+#personal-info .personal-info{
+    min-width: 12rem;
+    flex: 1;
+    padding: 1rem;
+}
+#personal-info .personal-info p:first-child{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#personal-info .personal-info p{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+#personal-info .introduce-myself{
+    padding: 2rem;
+    font-size: 1.3rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info .spec{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+#info .spec .card:first-child{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#skills{
+    flex: 6;
+    height: 60%;
+}
+#skills .card-content{
+    overflow-y: auto;
+}
+#skills .card-content .skill{
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1rem;
+}
+#skills .card-content .skill img{
+    width: 2rem;
+    height: 2rem;
+}
+#skills .card-content .skill p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-left: 0.5rem;
+}
+
+#skills .card-content .skill .lv{
+    text-align: end;
+    color: orange;
+}
+
+
+#certificates{
+    flex: 4;
+}
+#certificates .certificate p:first-child{
+    font-size: 1.5rem;
+}
+#certificates .certificate p:last-child{
+    font-size: 0.8rem;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
