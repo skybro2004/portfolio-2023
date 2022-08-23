@@ -19,10 +19,17 @@
             </div>
             <div class="card right">
                 <p class="card-header large">Introduce</p>
-                <div class="card-content">
+                <div class="card-content pc">
                     <p class="title">Shin</p>
                     <p class="title">Jun</p>
                     <p class="title">Portfolio</p>
+                </div>
+                <div class="card-content mobile">
+                    <p class="title">Shin Jun</p>
+                    <a class="header-contact" href="#contact">
+                        contact
+                        <img src="./resources/arrow-right.svg">
+                    </a>
                 </div>
             </div>
         </header>
@@ -128,21 +135,49 @@
                 </div>
 
                 <div class="flex-row">
-                    <img class="project-cover" src="./resources/projects/project-2.png">
+                    <img class="project-cover" src="./resources/projects/project-1.png">
                     <div class="project-content">
                         <p class="project-description">
-                            디스코드 봇, 시간표, 급식 사이트 등 제작한 프로젝트에서 사용되는 통합 API.
+                            연간 포트폴리오 모음.
                         </p>
 
                         <div class="project-footer">
-                            <a class="github">
+                            <button class="github btn-dropdown">
                                 <img src="./resources/Github.png">
-                                <p href="github.com">Visit Github</p>
-                            </a>
-                            <a class="visit">
-                                <p href="https://api.skybro2004.com/">Visit site</p>
+                                <p>Visit Github</p>
+                                <div class="dropdown">
+                                    <a href="https://github.com/skybro2004/portfolio-2021/">
+                                        2021
+                                        <img style="padding: 0.3rem;" src="./resources/arrow-right.svg">
+                                    </a>
+                                    <a href="https://github.com/skybro2004/portfolio-2022/">
+                                        2022
+                                        <img style="padding: 0.3rem;" src="./resources/arrow-right.svg">
+                                    </a>
+                                    <a href="https://github.com/skybro2004/portfolio-2023">
+                                        2023
+                                        <img style="padding: 0.3rem;" src="./resources/arrow-right.svg">
+                                    </a>
+                                </div>
+                            </button>
+                            <button class="visit btn-dropdown">
+                                <p>Visit site</p>
                                 <img style="padding: 0.2rem;" src="./resources/arrow-right.svg">
-                            </a>
+                                <div class="dropdown">
+                                    <a href="https://skybro2004.com/portfolio-2021/">
+                                        2021
+                                        <img style="padding: 0.3rem;" src="./resources/arrow-right.svg">
+                                    </a>
+                                    <a href="https://skybro2004.com/portfolio-2022/">
+                                        2022
+                                        <img style="padding: 0.3rem;" src="./resources/arrow-right.svg">
+                                    </a>
+                                    <a href="https://skybro2004.com/portfolio-2023/">
+                                        2023
+                                        <img style="padding: 0.3rem;" src="./resources/arrow-right.svg">
+                                    </a>
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -188,7 +223,7 @@
                 </div>
 
                 <div class="flex-row">
-                    <img class="project-cover" src="./resources/projects/project-2.png">
+                    <img class="project-cover" src="./resources/projects/project-3.png">
                     <div class="project-content">
                         <p class="project-description">
                             급식, 시간표 등 고등학교 생활에 도움이 되는 기능을 탑재한 디스코드 채팅봇.
@@ -272,6 +307,55 @@
                 </div>
             </div>
         </main>
+
+
+
+        <main id="contact">
+            <div class="card">
+                <p class="card-header large">Contact</p>
+                <div class="card-content">
+                    <a class="btn-contact" href="mailto:skybro2004@gmail.com">
+                        <span>
+                            <img src="./resources/icons/email.png">
+                            <p>E-Mail</p>
+                        </span>
+                        <span>
+                            <p class="detail">skybro2004@gmail.com</p>
+                            <img class="arrow" src="./resources/arrow-right.svg">
+                        </span>
+                    </a>
+                    <a class="btn-contact" href="https://www.instagram.com/shinjun0707/">
+                        <span>
+                            <img src="./resources/icons/instagram.png">
+                            <p>Instagram</p>
+                        </span>
+                        <span>
+                            <p class="detail">@shinjun0707</p>
+                            <img class="arrow" src="./resources/arrow-right.svg">
+                        </span>
+                    </a>
+                    <a class="btn-contact" href="https://discord.com/users/687207594594402332">
+                        <span>
+                            <img src="./resources/icons/discord.png">
+                            <p>Discord</p>
+                        </span>
+                        <span>
+                            <p class="detail">skybro2004#2828</p>
+                            <img class="arrow" src="./resources/arrow-right.svg">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <p>© 2022. Shin Jun. All rights reserved.</p>
+            <!-- Todo: add link like twitch, youtube or else -->
+        </footer>
+
+
 
         <script src="./js/index.js"></script>
     </body>
