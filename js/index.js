@@ -19,8 +19,6 @@ typoElem.nextElementSibling.addEventListener("animationstart", function(){
 let dropdown = document.getElementsByClassName("btn-dropdown")
 
 for(let elem of dropdown){
-    console.log(elem);
-
     elem.addEventListener("click", (e) => {
         console.log(e);
         elem.children[2].classList.toggle("show")
