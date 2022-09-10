@@ -20,12 +20,12 @@ let dropdown = document.getElementsByClassName("btn-dropdown")
 
 for(let elem of dropdown){
     elem.addEventListener("click", (e) => {
-        console.log(e);
         elem.children[2].classList.toggle("show")
     })
 
     elem.addEventListener("blur", (e) => {
-        console.log(e);
-        elem.children[2].classList.remove("show")
+        if(e.relatedTarget==null || !e.relatedTarget.classList.contains("dropdown-menu")){
+            elem.children[2].classList.remove("show")
+        }
     })
 }
